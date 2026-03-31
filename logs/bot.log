@@ -1,0 +1,608 @@
+[MESSAGE COMMAND ERROR] autopost: DiscordAPIError[50035]: Invalid Form Body
+components[COMPONENT_MAX_TOTAL_COMPONENTS_EXCEEDED]: Total number of components cannot exceed 40
+    at handleErrors (D:\Project Gabut\bot-anomalies\anri\node_modules\@discordjs\rest\dist\index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async SequentialHandler.runRequest (D:\Project Gabut\bot-anomalies\anri\node_modules\@discordjs\rest\dist\index.js:1163:23)
+    at async SequentialHandler.queueRequest (D:\Project Gabut\bot-anomalies\anri\node_modules\@discordjs\rest\dist\index.js:994:14)
+    at async _REST.request (D:\Project Gabut\bot-anomalies\anri\node_modules\@discordjs\rest\dist\index.js:1307:22)
+    at async TextChannel.send (D:\Project Gabut\bot-anomalies\anri\node_modules\discord.js\src\structures\interfaces\TextBasedChannel.js:195:15)
+    at async Object.run (D:\Project Gabut\bot-anomalies\anri\src\messageCommands\AutoPost\autopost.js:67:13)
+    at async Object.execute (D:\Project Gabut\bot-anomalies\anri\src\events\client\messageCreate.js:67:13) {
+  requestBody: {
+    files: [],
+    json: {
+      content: undefined,
+      tts: false,
+      nonce: undefined,
+      enforce_nonce: false,
+      embeds: undefined,
+      components: [Array],
+      username: undefined,
+      avatar_url: undefined,
+      allowed_mentions: undefined,
+      flags: 32768,
+      message_reference: [Object],
+      attachments: undefined,
+      sticker_ids: undefined,
+      thread_name: undefined,
+      applied_tags: undefined,
+      poll: undefined
+    }
+  },
+  rawError: {
+    message: 'Invalid Form Body',
+  rawError: {
+  rawError: {
+    message: 'Invalid Form Body',
+    code: 50035,
+    errors: { components: [Object] }
+  },
+  code: 50035,
+  status: 400,
+  method: 'POST',
+  url: 'https://discord.com/api/v10/channels/1488523460937519224/messages'
+}[2026-03-31T13:30:14.694Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T13:30:19.305Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T13:30:19.305Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T13:30:19.306Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T13:30:19.306Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T13:30:19.306Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T13:30:19.306Z] [LOG] [36m║                          ║[39m
+[2026-03-31T13:30:19.307Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T13:30:19.307Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T13:30:19.389Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T13:30:19.389Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T13:30:19.390Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T13:30:19.390Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T13:30:19.390Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T13:30:19.390Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T13:30:19.391Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T13:30:19.391Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T13:30:19.391Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T13:30:19.391Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T13:30:19.391Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T13:30:19.391Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T13:30:19.392Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T13:30:19.392Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T13:30:19.392Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T13:30:19.392Z] [LOG] [32m║                             ║[39m
+[2026-03-31T13:30:19.392Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T13:30:19.413Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T13:30:19.414Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T13:30:19.414Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T13:30:19.414Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T13:30:19.414Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T13:30:19.414Z] [LOG] [32m║                           ║[39m
+[2026-03-31T13:30:19.414Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T13:30:19.415Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T13:30:20.004Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T13:30:20.997Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T13:30:21.029Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T13:30:21.030Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T13:30:21.030Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T13:30:21.030Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T13:30:21.030Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T13:30:27.319Z] [ERROR] [INTERACTION ERROR] DiscordAPIError[50035]: Invalid Form Body
+data.components[COMPONENT_MAX_TOTAL_COMPONENTS_EXCEEDED]: Total number of components cannot exceed 40
+[2026-03-31T14:23:48.669Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T14:23:50.176Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T14:23:50.178Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T14:23:50.178Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T14:23:50.178Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T14:23:50.178Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T14:23:50.179Z] [LOG] [36m║                          ║[39m
+[2026-03-31T14:23:50.179Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T14:23:50.179Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T14:23:50.214Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T14:23:50.259Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T14:23:50.260Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T14:23:50.260Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T14:23:50.260Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T14:23:50.260Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T14:23:50.260Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T14:23:50.261Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T14:23:50.261Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T14:23:50.261Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T14:23:50.261Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T14:23:50.261Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T14:23:50.261Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T14:23:50.261Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T14:23:50.262Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T14:23:50.262Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T14:23:50.262Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T14:23:50.262Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T14:23:50.262Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T14:23:50.263Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T14:23:50.263Z] [LOG] [32m║                             ║[39m
+[2026-03-31T14:23:50.263Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T14:23:50.283Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T14:23:50.283Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T14:23:50.284Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T14:23:50.284Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T14:23:50.284Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T14:23:50.284Z] [LOG] [32m║                           ║[39m
+[2026-03-31T14:23:50.284Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T14:23:50.284Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T14:23:50.740Z] [LOG] [31mERROR: Failed to register commands: DiscordAPIError[50035]: Invalid Form Body[39m
+[31m5[APPLICATION_COMMANDS_DUPLICATE_NAME]: Application command names must be unique[39m
+[2026-03-31T14:23:51.528Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T14:23:51.573Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T14:23:51.574Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T14:23:51.574Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T14:23:51.574Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T14:23:51.574Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T14:25:56.401Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T14:25:57.488Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T14:25:57.489Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T14:25:57.489Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T14:25:57.489Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T14:25:57.489Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T14:25:57.490Z] [LOG] [36m║                          ║[39m
+[2026-03-31T14:25:57.490Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T14:25:57.490Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T14:25:57.520Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T14:25:57.562Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T14:25:57.563Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T14:25:57.563Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T14:25:57.563Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T14:25:57.563Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T14:25:57.563Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T14:25:57.564Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T14:25:57.564Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T14:25:57.564Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T14:25:57.564Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T14:25:57.564Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T14:25:57.564Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T14:25:57.564Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T14:25:57.565Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T14:25:57.565Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T14:25:57.565Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T14:25:57.565Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T14:25:57.565Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T14:25:57.565Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T14:25:57.566Z] [LOG] [32m║                             ║[39m
+[2026-03-31T14:25:57.566Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T14:25:57.576Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T14:25:57.576Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T14:25:57.576Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T14:25:57.576Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T14:25:57.576Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T14:25:57.577Z] [LOG] [32m║                           ║[39m
+[2026-03-31T14:25:57.577Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T14:25:57.577Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T14:25:58.178Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T14:25:59.328Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T14:25:59.376Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T14:25:59.376Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T14:25:59.376Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T14:25:59.376Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T14:25:59.376Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T14:32:32.992Z] [LOG] [TICKET SETUP] Guild 1440283963569471591 configured by anrizz12
+[2026-03-31T14:32:59.441Z] [LOG] [TICKET] #ticket-anrizz12 created by anrizz12 (717214260479918252)
+[2026-03-31T14:33:19.308Z] [LOG] [TICKET] #ticket-anrizz12 claimed by anrizz12
+[2026-03-31T14:33:45.825Z] [LOG] [TICKET] +1 job for handler anrizz12 (total: 1)
+[2026-03-31T14:33:45.826Z] [LOG] [TICKET] #ticket-anrizz12 closed by anrizz12
+[2026-03-31T14:55:47.673Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T14:55:48.668Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T14:55:48.669Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T14:55:48.670Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T14:55:48.671Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T14:55:48.671Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T14:55:48.671Z] [LOG] [36m║                          ║[39m
+[2026-03-31T14:55:48.671Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T14:55:48.673Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T14:55:48.698Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T14:55:48.732Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T14:55:48.732Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T14:55:48.733Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T14:55:48.734Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T14:55:48.734Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T14:55:48.735Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T14:55:48.735Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T14:55:48.736Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T14:55:48.737Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T14:55:48.737Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T14:55:48.738Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T14:55:48.738Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T14:55:48.739Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T14:55:48.740Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T14:55:48.740Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T14:55:48.741Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T14:55:48.741Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T14:55:48.741Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T14:55:48.742Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T14:55:48.742Z] [LOG] [32m║                             ║[39m
+[2026-03-31T14:55:48.743Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T14:55:48.754Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T14:55:48.754Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T14:55:48.755Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T14:55:48.756Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T14:55:48.756Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T14:55:48.757Z] [LOG] [32m║                           ║[39m
+[2026-03-31T14:55:48.757Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T14:55:48.758Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T14:55:49.468Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T14:55:50.210Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T14:55:50.283Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T14:55:50.284Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T14:55:50.285Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T14:55:50.287Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T14:55:50.288Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T15:03:59.573Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T15:04:01.105Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T15:04:01.106Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T15:04:01.107Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T15:04:01.108Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T15:04:01.108Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T15:04:01.109Z] [LOG] [36m║                          ║[39m
+[2026-03-31T15:04:01.109Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T15:04:01.109Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T15:04:01.135Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T15:04:01.180Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T15:04:01.180Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T15:04:01.181Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T15:04:01.181Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T15:04:01.182Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T15:04:01.182Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T15:04:01.183Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T15:04:01.183Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T15:04:01.184Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T15:04:01.184Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T15:04:01.185Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T15:04:01.185Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T15:04:01.186Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T15:04:01.186Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T15:04:01.186Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T15:04:01.187Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T15:04:01.187Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T15:04:01.188Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T15:04:01.188Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T15:04:01.188Z] [LOG] [32m║                             ║[39m
+[2026-03-31T15:04:01.189Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T15:04:01.208Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T15:04:01.209Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T15:04:01.209Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T15:04:01.210Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T15:04:01.210Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T15:04:01.210Z] [LOG] [32m║                           ║[39m
+[2026-03-31T15:04:01.211Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T15:04:01.211Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T15:04:01.831Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T15:04:03.447Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T15:04:03.528Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T15:04:03.528Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T15:04:03.529Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T15:04:03.529Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T15:04:03.529Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T15:15:18.348Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T15:15:19.392Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T15:15:19.392Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T15:15:19.393Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T15:15:19.393Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T15:15:19.393Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T15:15:19.393Z] [LOG] [36m║                          ║[39m
+[2026-03-31T15:15:19.394Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T15:15:19.394Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T15:15:19.415Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T15:15:19.456Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T15:15:19.456Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T15:15:19.457Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T15:15:19.457Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T15:15:19.457Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T15:15:19.457Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T15:15:19.457Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T15:15:19.458Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T15:15:19.458Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T15:15:19.458Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T15:15:19.458Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T15:15:19.458Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T15:15:19.459Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T15:15:19.459Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T15:15:19.459Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T15:15:19.459Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T15:15:19.459Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T15:15:19.460Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T15:15:19.460Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T15:15:19.460Z] [LOG] [32m║                             ║[39m
+[2026-03-31T15:15:19.460Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T15:15:19.475Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T15:15:19.475Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T15:15:19.476Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T15:15:19.476Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T15:15:19.476Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T15:15:19.476Z] [LOG] [32m║                           ║[39m
+[2026-03-31T15:15:19.476Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T15:15:19.477Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T15:15:20.054Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T15:15:20.972Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T15:15:21.008Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T15:15:21.009Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T15:15:21.010Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T15:15:21.010Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T15:15:21.011Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T15:46:00.307Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T15:46:07.827Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T15:46:07.829Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T15:46:07.835Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T15:46:07.843Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T15:46:07.850Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T15:46:07.856Z] [LOG] [36m║                          ║[39m
+[2026-03-31T15:46:07.988Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T15:46:08.040Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T15:46:08.293Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T15:46:08.454Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T15:46:08.455Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T15:46:08.455Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T15:46:08.456Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T15:46:08.456Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T15:46:08.456Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T15:46:08.457Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T15:46:08.457Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T15:46:08.460Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T15:46:08.461Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T15:46:08.461Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T15:46:08.466Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T15:46:08.469Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T15:46:08.471Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T15:46:08.472Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T15:46:08.472Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T15:46:08.473Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T15:46:08.473Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T15:46:08.474Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T15:46:08.474Z] [LOG] [32m║                             ║[39m
+[2026-03-31T15:46:08.474Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T15:46:08.556Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T15:46:08.556Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T15:46:08.557Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T15:46:08.558Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T15:46:08.558Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T15:46:08.559Z] [LOG] [32m║                           ║[39m
+[2026-03-31T15:46:08.559Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T15:46:08.559Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T15:46:09.316Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T15:46:10.311Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T15:46:10.349Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T15:46:10.356Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T15:46:10.358Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T15:46:10.359Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T15:46:10.359Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T15:58:10.516Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T15:58:14.562Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T15:58:14.657Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T15:58:14.698Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T15:58:14.708Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T15:58:14.728Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T15:58:14.765Z] [LOG] [36m║                          ║[39m
+[2026-03-31T15:58:14.772Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T15:58:14.778Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T15:58:15.086Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T15:58:15.260Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T15:58:15.289Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T15:58:15.294Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T15:58:15.296Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T15:58:15.298Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T15:58:15.307Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T15:58:15.309Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T15:58:15.310Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T15:58:15.321Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T15:58:15.327Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T15:58:15.337Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T15:58:15.372Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T15:58:15.397Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T15:58:15.404Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T15:58:15.411Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T15:58:15.416Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T15:58:15.421Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T15:58:15.458Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T15:58:15.466Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T15:58:15.471Z] [LOG] [32m║                             ║[39m
+[2026-03-31T15:58:15.473Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T15:58:15.716Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T15:58:15.744Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T15:58:15.767Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T15:58:15.865Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T15:58:15.890Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T15:58:15.900Z] [LOG] [32m║                           ║[39m
+[2026-03-31T15:58:15.959Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T15:58:15.976Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T15:58:16.740Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T15:58:17.524Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T15:58:17.617Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T15:58:17.626Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T15:58:17.626Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T15:58:17.632Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T15:58:17.633Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T16:06:11.818Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T16:06:15.217Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T16:06:15.223Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T16:06:15.224Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T16:06:15.242Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T16:06:15.255Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T16:06:15.269Z] [LOG] [36m║                          ║[39m
+[2026-03-31T16:06:15.272Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T16:06:15.275Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T16:06:15.398Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T16:06:15.489Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T16:06:15.490Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T16:06:15.491Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T16:06:15.491Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T16:06:15.491Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T16:06:15.492Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T16:06:15.492Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T16:06:15.495Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T16:06:15.496Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T16:06:15.497Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T16:06:15.498Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T16:06:15.499Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T16:06:15.500Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T16:06:15.501Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T16:06:15.501Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T16:06:15.502Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T16:06:15.502Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T16:06:15.503Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T16:06:15.503Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T16:06:15.503Z] [LOG] [32m║                             ║[39m
+[2026-03-31T16:06:15.504Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T16:06:15.533Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T16:06:15.534Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T16:06:15.536Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T16:06:15.536Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T16:06:15.537Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T16:06:15.537Z] [LOG] [32m║                           ║[39m
+[2026-03-31T16:06:15.538Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T16:06:15.538Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T16:06:16.322Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T16:06:19.390Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T16:06:19.422Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T16:06:19.423Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T16:06:19.423Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T16:06:19.424Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T16:06:19.424Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T16:13:20.160Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T16:13:25.548Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T16:13:25.549Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T16:13:25.550Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T16:13:25.551Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T16:13:25.552Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T16:13:25.553Z] [LOG] [36m║                          ║[39m
+[2026-03-31T16:13:25.553Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T16:13:25.555Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T16:13:25.696Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T16:13:25.849Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T16:13:25.982Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T16:13:26.050Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T16:13:26.057Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T16:13:26.067Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T16:13:26.076Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T16:13:26.079Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T16:13:26.084Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T16:13:26.090Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T16:13:26.092Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T16:13:26.093Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T16:13:26.093Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T16:13:26.098Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T16:13:26.099Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T16:13:26.100Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T16:13:26.102Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T16:13:26.104Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T16:13:26.105Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T16:13:26.106Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T16:13:26.108Z] [LOG] [32m║                             ║[39m
+[2026-03-31T16:13:26.117Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T16:13:26.168Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T16:13:26.169Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T16:13:26.173Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T16:13:26.175Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T16:13:26.179Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T16:13:26.181Z] [LOG] [32m║                           ║[39m
+[2026-03-31T16:13:26.182Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T16:13:26.184Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T16:13:26.885Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T16:13:27.588Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T16:13:27.614Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T16:13:27.616Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T16:13:27.617Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T16:13:27.617Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T16:13:27.618Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T16:13:55.760Z] [ERROR] [INTERACTION ERROR] DiscordAPIError[50035]: Invalid Form Body
+components[COMPONENT_MAX_TOTAL_COMPONENTS_EXCEEDED]: Total number of components cannot exceed 40
+[2026-03-31T16:19:56.372Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T16:19:59.110Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T16:19:59.110Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T16:19:59.111Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T16:19:59.111Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T16:19:59.111Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T16:19:59.112Z] [LOG] [36m║                          ║[39m
+[2026-03-31T16:19:59.119Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T16:19:59.120Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T16:19:59.189Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T16:19:59.275Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T16:19:59.310Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T16:19:59.339Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T16:19:59.356Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T16:19:59.420Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T16:19:59.478Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T16:19:59.494Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T16:19:59.495Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T16:19:59.498Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T16:19:59.503Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T16:19:59.504Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T16:19:59.504Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T16:19:59.505Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T16:19:59.505Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T16:19:59.505Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T16:19:59.505Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T16:19:59.506Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T16:19:59.506Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T16:19:59.506Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T16:19:59.506Z] [LOG] [32m║                             ║[39m
+[2026-03-31T16:19:59.507Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T16:19:59.528Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T16:19:59.528Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T16:19:59.535Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T16:19:59.537Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T16:19:59.561Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T16:19:59.586Z] [LOG] [32m║                           ║[39m
+[2026-03-31T16:19:59.588Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T16:19:59.591Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T16:20:00.274Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T16:20:01.065Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T16:20:01.088Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T16:20:01.088Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T16:20:01.089Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T16:20:01.089Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T16:20:01.090Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T16:21:23.418Z] [LOG] [TICKET SETUP] Guild 1440283963569471591 configured by anrizz12
+[2026-03-31T16:23:35.522Z] [LOG] [TICKET] #ticket-anrizz12 created by anrizz12 (717214260479918252)
+[2026-03-31T16:26:35.319Z] [LOG] [TICKET] #ticket-anrizz12 closed by anrizz12
+[2026-03-31T16:29:28.991Z] [LOG] [LOGGER] Log file: D:\Project Gabut\bot-anomalies\anri\logs\bot.log
+[2026-03-31T16:29:35.156Z] [LOG] [36m╔──────────────────────────╗[39m
+[2026-03-31T16:29:35.156Z] [LOG] [36m║ LOADED EVENTS:           ║[39m
+[2026-03-31T16:29:35.157Z] [LOG] [36m║   • interactionCreate    ║[39m
+[2026-03-31T16:29:35.157Z] [LOG] [36m║   • messageCreate        ║[39m
+[2026-03-31T16:29:35.159Z] [LOG] [36m║   • clientReady (once)   ║[39m
+[2026-03-31T16:29:35.163Z] [LOG] [36m║                          ║[39m
+[2026-03-31T16:29:35.165Z] [LOG] [36m╚──────────────────────────╝[39m
+[2026-03-31T16:29:35.166Z] [LOG] [35mAll events loaded successfully![39m
+[2026-03-31T16:29:35.277Z] [LOG] [RANKING] Weekly reset timer started. Next Monday WIB reset ≈ 2026-04-05T17:00:00.000Z
+[2026-03-31T16:29:35.399Z] [LOG] [32m╔─────────────────────────────╗[39m
+[2026-03-31T16:29:35.400Z] [LOG] [32m║ LOADED COMMANDS:            ║[39m
+[2026-03-31T16:29:35.401Z] [LOG] [32m║   • autologin               ║[39m
+[2026-03-31T16:29:35.401Z] [LOG] [32m║   • autopanel               ║[39m
+[2026-03-31T16:29:35.402Z] [LOG] [32m║   • ping                    ║[39m
+[2026-03-31T16:29:35.403Z] [LOG] [32m║   • ranking                 ║[39m
+[2026-03-31T16:29:35.403Z] [LOG] [32m║   • ticket                  ║[39m
+[2026-03-31T16:29:35.403Z] [LOG] [32m║   • autopost                ║[39m
+[2026-03-31T16:29:35.404Z] [LOG] [32m║   • settoken                ║[39m
+[2026-03-31T16:29:35.405Z] [LOG] [32m║   • button-1                ║[39m
+[2026-03-31T16:29:35.408Z] [LOG] [32m║   • button-2                ║[39m
+[2026-03-31T16:29:35.409Z] [LOG] [32m║   • button-3                ║[39m
+[2026-03-31T16:29:35.409Z] [LOG] [32m║   • file-component          ║[39m
+[2026-03-31T16:29:35.410Z] [LOG] [32m║   • media-gallery           ║[39m
+[2026-03-31T16:29:35.411Z] [LOG] [32m║   • menu                    ║[39m
+[2026-03-31T16:29:35.411Z] [LOG] [32m║   • section-and-thumbnail   ║[39m
+[2026-03-31T16:29:35.412Z] [LOG] [32m║   • separator               ║[39m
+[2026-03-31T16:29:35.413Z] [LOG] [32m║   • text-display            ║[39m
+[2026-03-31T16:29:35.413Z] [LOG] [32m║   • v2-components           ║[39m
+[2026-03-31T16:29:35.413Z] [LOG] [32m║                             ║[39m
+[2026-03-31T16:29:35.414Z] [LOG] [32m╚─────────────────────────────╝[39m
+[2026-03-31T16:29:35.474Z] [LOG] [32m╔═══════════════════════════╗[39m
+[2026-03-31T16:29:35.477Z] [LOG] [32m║ LOADED COMMANDS:          ║[39m
+[2026-03-31T16:29:35.480Z] [LOG] [32m║   • AutoLogin/autologin   ║[39m
+[2026-03-31T16:29:35.481Z] [LOG] [32m║   • AutoPost/autopost     ║[39m
+[2026-03-31T16:29:35.481Z] [LOG] [32m║   • Info/ping             ║[39m
+[2026-03-31T16:29:35.485Z] [LOG] [32m║                           ║[39m
+[2026-03-31T16:29:35.485Z] [LOG] [32m╚═══════════════════════════╝[39m
+[2026-03-31T16:29:35.487Z] [LOG] [35mSUCCESS: Message commands loaded successfully![39m
+[2026-03-31T16:29:36.255Z] [LOG] [35mSUCCESS: Slash commands registered successfully![39m
+[2026-03-31T16:29:37.345Z] [LOG] [32m[INFO] App logged in successfully[39m
+[2026-03-31T16:29:37.379Z] [LOG] ╔──────────────────────────────────────╗
+[2026-03-31T16:29:37.385Z] [LOG] ║ BOT READY                            ║
+[2026-03-31T16:29:37.390Z] [LOG] ╠──────────────────────────────────────╣
+[2026-03-31T16:29:37.393Z] [LOG] ║ Logged in as Herbie Assistant#6568   ║
+[2026-03-31T16:29:37.395Z] [LOG] ╚──────────────────────────────────────╝
+[2026-03-31T16:29:56.397Z] [LOG] [TICKET SETUP] Guild 1440283963569471591 configured by anrizz12
+[2026-03-31T16:31:02.747Z] [LOG] [TICKET] #ticket-anrizz12 created by anrizz12 (717214260479918252)
+[2026-03-31T16:31:45.737Z] [LOG] [TICKET] #ticket-anrizz12 closed by anrizz12
+[2026-03-31T16:32:11.696Z] [LOG] [TICKET] #ticket-aisbeer created by aisbeer (817574632131264512)
+[2026-03-31T16:32:47.334Z] [LOG] [TICKET] Channel renamed to "sb-mods" by aisbeer

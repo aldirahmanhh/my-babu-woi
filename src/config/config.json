@@ -1,5 +1,15 @@
 {
     "color": "000000",
     "prefix": "?",
-    "botName": "zar"
+    "botName": "anri",
+    "images": {
+        "welcomeBanner": "https://i.postimg.cc/J45rR7Xn/standard.gif",
+        "welcomeThumbnail": "https://cdn.discordapp.com/emojis/1129069176917610619.gif",
+        "panelBanner": "https://i.postimg.cc/J45rR7Xn/standard.gif",
+        "panelThumbnail": "https://cdn.discordapp.com/emojis/1129069176917610619.gif",
+        "autoLoginBanner": "https://i.postimg.cc/J45rR7Xn/standard.gif",
+        "autoLoginThumbnail": "https://cdn.discordapp.com/emojis/1129069176917610619.gif",
+        "ticketBanner": "https://i.postimg.cc/J45rR7Xn/standard.gif",
+        "ticketThumbnail": "https://cdn.discordapp.com/emojis/1129069176917610619.gif"
+    }
 }

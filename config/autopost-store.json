@@ -1,0 +1,29 @@
+{
+  "users": {
+    "717214260479918252": {
+      "channels": [
+        {
+          "id": "1409465709578293291",
+          "message": "Test Auto Post",
+          "interval": 60
+        }
+      ],
+      "autoLoginEnabled": false,
+      "autoLoginChannel": "1243177096948486186",
+      "autoLoginToken": "NzE3MjE0MjYwNDc5OTE4MjUy.GXhEhw.T3syzp7zx0NIAbpnt_--AOqbE170x_ILV57eHQ"
+    },
+    "817574632131264512": {
+      "channels": [],
+      "autoLoginEnabled": false,
+      "autoLoginChannel": "1243177096948486186"
+    }
+  },
+  "privateRooms": {
+    "717214260479918252-1774974019725": {
+      "userId": "717214260479918252",
+      "channelId": "1488573673542520984",
+      "createdAt": 1774974019726,
+      "panelMessageId": "1488573676021350452"
+    }
+  }
+}

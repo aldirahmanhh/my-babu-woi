@@ -1,0 +1,62 @@
+{
+  "1488546661121790153": {
+    "id": "1488546661121790153",
+    "channelId": "1488546661121790153",
+    "guildId": "1440283963569471591",
+    "userId": "717214260479918252",
+    "username": "anrizz12",
+    "subject": "Testtt",
+    "reason": "Testing Some",
+    "handlerId": "717214260479918252",
+    "handlerUsername": "anrizz12",
+    "status": "closed",
+    "createdAt": "2026-03-31T14:32:59.438Z",
+    "claimedAt": "2026-03-31T14:33:19.306Z",
+    "closedAt": "2026-03-31T14:33:45.821Z"
+  },
+  "1488574495475237166": {
+    "id": "1488574495475237166",
+    "channelId": "1488574495475237166",
+    "guildId": "1440283963569471591",
+    "userId": "717214260479918252",
+    "username": "anrizz12",
+    "subject": "AWDAWD",
+    "reason": "wDAWdawdawd",
+    "handlerId": null,
+    "handlerUsername": null,
+    "status": "closed",
+    "createdAt": "2026-03-31T16:23:35.504Z",
+    "claimedAt": null,
+    "closedAt": "2026-03-31T16:26:35.318Z"
+  },
+  "1488576371168121023": {
+    "id": "1488576371168121023",
+    "channelId": "1488576371168121023",
+    "guildId": "1440283963569471591",
+    "userId": "717214260479918252",
+    "username": "anrizz12",
+    "subject": "PTHTS",
+    "reason": "Aadwdwadede",
+    "handlerId": null,
+    "handlerUsername": null,
+    "status": "closed",
+    "createdAt": "2026-03-31T16:31:02.737Z",
+    "claimedAt": null,
+    "closedAt": "2026-03-31T16:31:45.730Z"
+  },
+  "1488576659333582990": {
+    "id": "1488576659333582990",
+    "channelId": "1488576659333582990",
+    "guildId": "1440283963569471591",
+    "userId": "817574632131264512",
+    "username": "aisbeer",
+    "subject": "PTHTS",
+    "reason": "SB MODS BRAPA",
+    "handlerId": null,
+    "handlerUsername": null,
+    "status": "open",
+    "createdAt": "2026-03-31T16:32:11.693Z",
+    "claimedAt": null,
+    "closedAt": null
+  }
+}
