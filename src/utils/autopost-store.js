@@ -16,6 +16,11 @@ function loadStore() {
     } catch {
         cache = { users: {}, privateRooms: {} };
     }
+
+    if (!cache || typeof cache !== 'object') cache = {};
+    if (!cache.users || typeof cache.users !== 'object') cache.users = {};
+    if (!cache.privateRooms || typeof cache.privateRooms !== 'object') cache.privateRooms = {};
+
     return cache;
 }
 
@@ -65,6 +70,9 @@ function removeChannel(userId, channelId) {
 
 function createPrivateRoom(userId, roomId, channelId) {
     const store = loadStore();
+    if (!store.privateRooms || typeof store.privateRooms !== 'object') {
+        store.privateRooms = {};
+    }
     store.privateRooms[roomId] = { userId, channelId, createdAt: Date.now(), panelMessageId: null };
     saveStore();
 }

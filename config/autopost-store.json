@@ -1,0 +1,17 @@
+{
+  "users": {
+    "566248401943920645": {
+      "channels": [],
+      "autoLoginEnabled": false,
+      "autoLoginChannel": "1243177096948486186"
+    }
+  },
+  "privateRooms": {
+    "566248401943920645-1780659159421": {
+      "userId": "566248401943920645",
+      "channelId": "1512418876925935657",
+      "createdAt": 1780659159422,
+      "panelMessageId": "1512418879127687290"
+    }
+  }
+}

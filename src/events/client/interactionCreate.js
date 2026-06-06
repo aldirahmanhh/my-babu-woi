@@ -25,10 +25,39 @@ const {
   SectionBuilder,
   TextDisplayBuilder,
   ThumbnailBuilder,
+  PermissionsBitField,
 } = require("discord.js");
 
 const config = require("../../config/config.json");
 const { readJSON } = require("../../utils/dataManager");
+
+// ─── V2 template-command guard ────────────────────────────────────────────────
+// Slash command names registered from src/slashCommands/V2 Components/.
+// These are sandbox/showcase commands — regular members must not see them.
+const V2_TEMPLATE_COMMANDS = new Set([
+  "v2-components",
+  "button-1",
+  "button-2",
+  "button-3",
+  "file-component",
+  "media-gallery",
+  "separator",
+  "section-and-thumbnail",
+  "text-display",
+  "menu",
+]);
+
+/**
+ * Returns true when the interaction user is the guild owner OR has the
+ * Administrator permission. Used to gate the V2 Components sandbox commands.
+ * @param {import('discord.js').ChatInputCommandInteraction} interaction
+ * @returns {boolean}
+ */
+function isOwnerOrAdmin(interaction) {
+  if (interaction.user.id === interaction.guild.ownerId) return true;
+  const perms = interaction.member?.permissions;
+  return Boolean(perms && perms.has(PermissionsBitField.Flags.Administrator));
+}
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -163,6 +192,23 @@ module.exports = {
         // Dispatch to the registered slash command module
         const command = client.slash.get(interaction.commandName);
         if (!command) return;
+
+        // V2 Components sandbox guard — restrict to server owner / admin
+        if (V2_TEMPLATE_COMMANDS.has(interaction.commandName)) {
+          if (!isOwnerOrAdmin(interaction)) {
+            return interaction.reply({
+              flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2,
+              components: [
+                buildSimpleContainer(
+                  client,
+                  0xed4245,
+                  "🔒 **Restricted**",
+                  "This command is reserved for the server owner and administrators.",
+                ),
+              ],
+            });
+          }
+        }
 
         await command.run(client, interaction, interaction.options);
         return;

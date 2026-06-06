@@ -227,8 +227,55 @@ async function handleSetToken(client, interaction, userId) {
 }
 
 async function handleCreateRoom(client, interaction, userId) {
+  const guild = interaction.guild;
   const room = store.getUserRoom(userId);
+  console.log(`[AP ROOM DEBUG] userId=${userId} storedRoom=${JSON.stringify(room)}`);
   if (room) {
+    const existingChannel = await guild.channels.fetch(room.channelId).catch((e) => {
+      console.error(`[AP ROOM DEBUG] fetch(${room.channelId}) failed:`, e.message);
+      return null;
+    });
+    console.log(`[AP ROOM DEBUG] fetch result: ${existingChannel ? existingChannel.id + '#' + existingChannel.name : 'NOT_FOUND'}`);
+    if (existingChannel) {
+      const thumbnail = botThumb(client);
+      const container = new ContainerBuilder()
+        .setAccentColor(0xfee75c)
+        .addSectionComponents(
+          new SectionBuilder()
+            .addTextDisplayComponents(
+              new TextDisplayBuilder().setContent("⚠️ **Room Already Exists**"),
+              new TextDisplayBuilder().setContent(
+                "You already have a private room. Use `autopost` inside it to open the panel.",
+              ),
+            )
+            .setThumbnailAccessory(thumbnail),
+        );
+
+      return interaction.reply({
+        flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2,
+        components: [container],
+      });
+    }
+
+    console.log(`[AP ROOM DEBUG] deleting stale room ${room.roomId}`);
+    store.deletePrivateRoom(room.roomId);
+  }
+
+  await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+  // ── Check for existing room in the server using fresh API data ─────────────
+  const channels = await guild.channels.fetch();
+  console.log(`[AP ROOM DEBUG] fetched ${channels.size} channels from API`);
+  const existingGuildRoom = channels.find((ch) => {
+    if (!ch || ch.type !== 0 || ch.name !== `autopost-${interaction.user.username}`) return false;
+    const parent = channels.get(ch.parentId);
+    return parent && parent.name === "🔒 AutoPost Rooms" && parent.type === 4;
+  });
+
+  console.log(`[AP ROOM DEBUG] existingGuildRoom=${existingGuildRoom ? existingGuildRoom.id + '#' + existingGuildRoom.name : 'NONE'}`);
+
+  if (existingGuildRoom) {
+    store.createPrivateRoom(userId, `${userId}-${Date.now()}`, existingGuildRoom.id);
     const thumbnail = botThumb(client);
     const container = new ContainerBuilder()
       .setAccentColor(0xfee75c)
@@ -237,21 +284,17 @@ async function handleCreateRoom(client, interaction, userId) {
           .addTextDisplayComponents(
             new TextDisplayBuilder().setContent("⚠️ **Room Already Exists**"),
             new TextDisplayBuilder().setContent(
-              "You already have a private room. Use `autopost` inside it to open the panel.",
+              "You already have a private room in this server. Use `autopost` inside it to open the panel.",
             ),
           )
           .setThumbnailAccessory(thumbnail),
       );
 
-    return interaction.reply({
-      flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2,
+    return interaction.editReply({
+      flags: MessageFlags.IsComponentsV2,
       components: [container],
     });
   }
-
-  await interaction.deferReply({ flags: MessageFlags.Ephemeral });
-
-  const guild = interaction.guild;
   const overwrites = [
     { id: guild.roles.everyone, deny: ["ViewChannel"] },
     {

@@ -27,7 +27,6 @@ const {
   SeparatorSpacingSize,
   MediaGalleryBuilder,
   MediaGalleryItemBuilder,
-  ActionRowBuilder,
   ButtonBuilder,
   ButtonStyle,
 } = require("discord.js");
@@ -132,9 +131,8 @@ module.exports = {
       // Component count:
       //   Container(1) + MediaGallery(1)+Item(1) + Sep(1)
       //   + Section(1)+TD(1)+TD(1)+TD(1)+Thumb(1) + Sep(1) + TD(1)
-      //   = 11  (container components)
-      //   ActionRow(1) + Button(1) = 2
-      //   Grand total = 13  ✓
+      //   + ActionRow(1) + Button(1)
+      //   = 13  ✓
       //
       const publicContainer = new ContainerBuilder()
         .setAccentColor(0x5865f2)
@@ -163,20 +161,20 @@ module.exports = {
           new TextDisplayBuilder().setContent(
             "👇 Click the button below to create your private room.",
           ),
+        )
+        .addActionRowComponents((actionRow) =>
+          actionRow.addComponents(
+            new ButtonBuilder()
+              .setCustomId("ap_public_create_room")
+              .setLabel("🔒 Create Private Room")
+              .setStyle(ButtonStyle.Success),
+          ),
         );
-
-      // Persistent button — any server member can click this
-      const publicRow = new ActionRowBuilder().addComponents(
-        new ButtonBuilder()
-          .setCustomId("ap_public_create_room")
-          .setLabel("🔒 Create Private Room")
-          .setStyle(ButtonStyle.Success),
-      );
 
       // ── Post the public panel ──────────────────────────────────────────
       await interaction.channel.send({
         flags: MessageFlags.IsComponentsV2,
-        components: [publicContainer, publicRow],
+        components: [publicContainer],
       });
 
       // ── Success reply to owner ─────────────────────────────────────────
